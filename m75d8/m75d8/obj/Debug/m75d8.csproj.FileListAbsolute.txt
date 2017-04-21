@@ -1,0 +1,10 @@
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\obj\Debug\m75d8.csprojResolveAssemblyReference.cache
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\obj\Debug\m75d8.m75d8.resources
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\obj\Debug\m75d8.Properties.Resources.resources
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\obj\Debug\m75d8.csproj.GenerateResource.Cache
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\bin\Debug\m75d8.exe
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\bin\Debug\m75d8.pdb
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\obj\Debug\m75d8.exe
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\obj\Debug\m75d8.pdb
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\bin\Debug\ISLibrary.dll
+D:\my_docs\Программирование\winddows forms c#\projects\m75d8\m75d8\bin\Debug\ISLibrary.pdb
