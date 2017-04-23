@@ -63,6 +63,26 @@ namespace ISLibrary {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _24px_png_double_arrow_left {
+            get {
+                object obj = ResourceManager.GetObject("_24px_png_double_arrow_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _24px_png_double_arrow_right {
+            get {
+                object obj = ResourceManager.GetObject("_24px_png_double_arrow_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap _24px_png_exit {
             get {
                 object obj = ResourceManager.GetObject("_24px_png_exit", resourceCulture);
@@ -116,6 +136,26 @@ namespace ISLibrary {
         public static System.Drawing.Bitmap _24px_png_settings {
             get {
                 object obj = ResourceManager.GetObject("_24px_png_settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _24px_png_single_arrow_left {
+            get {
+                object obj = ResourceManager.GetObject("_24px_png_single_arrow_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _24px_png_single_arrow_right {
+            get {
+                object obj = ResourceManager.GetObject("_24px_png_single_arrow_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

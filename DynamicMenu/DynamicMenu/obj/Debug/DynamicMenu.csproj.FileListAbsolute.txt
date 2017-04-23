@@ -17,3 +17,6 @@ D:\programming\windwows formc c#\projects\DynamicMenu\DynamicMenu\bin\Debug\ja\N
 D:\programming\windwows formc c#\projects\DynamicMenu\DynamicMenu\bin\Debug\zh-CN\Npgsql.resources.dll
 D:\programming\windwows formc c#\projects\DynamicMenu\DynamicMenu\obj\Debug\DynamicMenu.frmMultithreading.resources
 D:\programming\windwows formc c#\projects\DynamicMenu\DynamicMenu\obj\Debug\DynamicMenu.frmWellcome.resources
+D:\programming\gitrepos\homerepo\DynamicMenu\DynamicMenu\bin\Debug\DynamicMenu.exe.config
+D:\programming\gitrepos\homerepo\DynamicMenu\DynamicMenu\obj\Debug\DynamicMenu.exe
+D:\programming\gitrepos\homerepo\DynamicMenu\DynamicMenu\obj\Debug\DynamicMenu.pdb

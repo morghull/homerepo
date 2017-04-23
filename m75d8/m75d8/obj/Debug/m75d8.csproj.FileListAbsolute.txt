@@ -18,3 +18,12 @@ D:\programming\gitrepos\homerepo\m75d8\m75d8\obj\Debug\m75d8.csprojResolveAssemb
 D:\programming\gitrepos\homerepo\m75d8\m75d8\obj\Debug\m75d8.m75d8.resources
 D:\programming\gitrepos\homerepo\m75d8\m75d8\obj\Debug\m75d8.Properties.Resources.resources
 D:\programming\gitrepos\homerepo\m75d8\m75d8\obj\Debug\m75d8.csproj.GenerateResource.Cache
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\Mono.Security.dll
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\Npgsql.dll
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\Npgsql.xml
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\de\Npgsql.resources.dll
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\es\Npgsql.resources.dll
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\fi\Npgsql.resources.dll
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\fr\Npgsql.resources.dll
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\ja\Npgsql.resources.dll
+D:\programming\gitrepos\homerepo\m75d8\m75d8\bin\Debug\zh-CN\Npgsql.resources.dll

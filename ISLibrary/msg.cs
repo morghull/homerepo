@@ -15,6 +15,15 @@ namespace ISLibrary
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Displays a message box with specified text, buttons, image.
+        /// </summary>
+        /// <param name="message">The text to display in the message box.</param>
+        /// <param name="buttons">One of the ISLibrary.msg.DialogButtons values that specifies which
+        ///     buttons to display in the message box.</param>
+        /// <param name="image">One of the ISLibrary.msg.DialogImage values that specifies which
+        ///     image to display in the message box.</param>
+        /// <returns></returns>
         public static DialogResult Show(string message, DialogButtons buttons, DialogImage image)
         {
             mgsForm = new msg();
@@ -24,6 +33,16 @@ namespace ISLibrary
             ButtonsInit(buttons);
             return mgsForm.ShowDialog();
         }
+        /// <summary>
+        /// Displays a message box with specified text, caption, buttons, image.
+        /// </summary>
+        /// <param name="message">The text to display in the message box.</param>
+        /// <param name="caption">The text to display in the title bar of the message box.</param>
+        /// <param name="buttons">One of the ISLibrary.msg.DialogButtons values that specifies which
+        ///     buttons to display in the message box.</param>
+        /// <param name="image">One of the ISLibrary.msg.DialogImage values that specifies which
+        ///     image to display in the message box.</param>
+        /// <returns></returns>
         public static DialogResult Show(string message, string caption, DialogButtons buttons, DialogImage image)
         {
             mgsForm = new msg();
@@ -79,7 +98,7 @@ namespace ISLibrary
                         Name = "btnOk",
                         Anchor = AnchorStyles.Bottom,
                         Size = new Size(75, 28),
-                        Location = new Point(150, 120),
+                        Location = new Point(150, 114),
                         Text = "Ok",
                         Font = new Font("Arial", 11F)
                     }
@@ -94,7 +113,7 @@ namespace ISLibrary
                         Name = "btnOk",
                         Anchor = AnchorStyles.Bottom,
                         Size = new Size(75, 28),
-                        Location = new Point(89, 120),
+                        Location = new Point(89, 114),
                         Text = "Ok",
                         Font = new Font("Arial", 11F)
                     },
@@ -103,7 +122,7 @@ namespace ISLibrary
                         Name = "btnCancel",
                         Anchor = AnchorStyles.Bottom,
                         Size = new Size(75, 28),
-                        Location = new Point(194, 120),
+                        Location = new Point(194, 114),
                         Text = "Отмена",
                         Font = new Font("Arial", 11F)
                     }
@@ -117,7 +136,7 @@ namespace ISLibrary
                         Name = "btnYes",
                         Anchor = AnchorStyles.Bottom,
                         Size = new Size(75, 28),
-                        Location = new Point(95, 120),
+                        Location = new Point(95, 114),
                         Text = "Да",
                         Font = new Font("Arial", 11F)
                     },
@@ -126,7 +145,7 @@ namespace ISLibrary
                         Name = "btnNo",
                         Anchor = AnchorStyles.Bottom,
                         Size = new Size(75, 28),
-                        Location = new Point(200, 120),
+                        Location = new Point(200, 114),
                         Text = "Нет",
                         Font = new Font("Arial", 11F)
                     }

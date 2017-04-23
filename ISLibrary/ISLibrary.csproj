@@ -54,6 +54,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ISResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="select.Designer.cs">
+      <DependentUpon>select.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="msg.resx">
@@ -62,6 +68,9 @@
     <EmbeddedResource Include="ISResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ISResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="select.resx">
+      <DependentUpon>select.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +110,10 @@
     <None Include="Resources\48px_png_quest.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\24px_png_double_arrow_left.png" />
+    <Content Include="Resources\24px_png_double_arrow_right.png" />
+    <Content Include="Resources\24px_png_single_arrow_left.png" />
+    <Content Include="Resources\24px_png_single_arrow_right.png" />
     <Content Include="Resources\prog.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

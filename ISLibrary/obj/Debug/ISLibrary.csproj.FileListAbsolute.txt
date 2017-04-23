@@ -13,3 +13,4 @@ D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.csproj.GenerateRe
 D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.dll
 D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.pdb
 D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.ISResources.resources
+D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.select.resources
