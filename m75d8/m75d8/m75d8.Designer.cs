@@ -71,20 +71,22 @@
             // toolStripButton_xls
             // 
             this.toolStripButton_xls.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_xls.Enabled = false;
             this.toolStripButton_xls.Image = global::m75d8.Properties.Resources._24px_png_print_xls;
             this.toolStripButton_xls.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_xls.Name = "toolStripButton_xls";
             this.toolStripButton_xls.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton_xls.Text = "toolStripButton1";
+            this.toolStripButton_xls.Text = "Просмотреть сформированный xls-файл";
             // 
             // toolStripButton_txt
             // 
             this.toolStripButton_txt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_txt.Enabled = false;
             this.toolStripButton_txt.Image = global::m75d8.Properties.Resources._24px_png_view;
             this.toolStripButton_txt.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_txt.Name = "toolStripButton_txt";
             this.toolStripButton_txt.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton_txt.Text = "toolStripButton1";
+            this.toolStripButton_txt.Text = "Просмотреть протокол работы";
             // 
             // toolStripButton_exit
             // 
@@ -138,6 +140,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 0);
             this.Name = "m75d8";
             this.Text = "Потребность в материалах на год. Цеха. Изделия. XLS-файл. Формирование";
             this.toolStrip.ResumeLayout(false);

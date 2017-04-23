@@ -14,7 +14,14 @@ namespace m75d8
         public m75d8()
         {
             InitializeComponent();
-            toolStripButton_exit.Click += (s, e) => { MessageBox.Show("Завершить работу с программой?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question); };
+            toolStripButton_exit.Click += (s, e) =>
+            {
+                if (ISLibrary.msg.Show("Желаете завершить работу с программой?", ISLibrary.msg.DialogButtons.YesNo, ISLibrary.msg.DialogImage.Question) == DialogResult.Yes) Application.Exit();
+            };
+            toolStripButton_ok.Click += (s, e) =>
+            {
+                ISLibrary.msg.Show("Ошибка при работе с SQL-сервером!", "Ошибка", ISLibrary.msg.DialogButtons.Ok, ISLibrary.msg.DialogImage.Error);
+            };
         }
     }
 }

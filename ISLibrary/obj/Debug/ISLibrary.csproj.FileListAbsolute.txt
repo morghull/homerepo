@@ -5,3 +5,11 @@ D:\my_docs\Программирование\winddows forms c#\projects\ISLibrary
 D:\my_docs\Программирование\winddows forms c#\projects\ISLibrary\obj\Debug\ISLibrary.csproj.GenerateResource.Cache
 D:\my_docs\Программирование\winddows forms c#\projects\ISLibrary\obj\Debug\ISLibrary.dll
 D:\my_docs\Программирование\winddows forms c#\projects\ISLibrary\obj\Debug\ISLibrary.pdb
+D:\programming\gitrepos\homerepo\ISLibrary\bin\Debug\ISLibrary.dll
+D:\programming\gitrepos\homerepo\ISLibrary\bin\Debug\ISLibrary.pdb
+D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.csprojResolveAssemblyReference.cache
+D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.msg.resources
+D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.csproj.GenerateResource.Cache
+D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.dll
+D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.pdb
+D:\programming\gitrepos\homerepo\ISLibrary\obj\Debug\ISLibrary.ISResources.resources
