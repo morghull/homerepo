@@ -52,6 +52,12 @@ namespace ISLibrary
             ButtonsInit(buttons);
             return mgsForm.ShowDialog();
         }
+        /// <summary>
+        /// <para>Assosiates ISLibrary.msg.DialogButtons value with List&lt;Button&gt; in Dictionary ISLibrary.msg.dicDialogButtons.</para>
+        /// <para>And for each Button in List&lt;Button&gt; attaches click event handlers to return specific DialogResult for this form.</para>
+        /// </summary>
+        /// <param name="buttons">One of the ISLibrary.msg.DialogButtons values that specifies which
+        ///     buttons to display in the message box.</param>
         private static void ButtonsInit(DialogButtons buttons) 
         {
             foreach (Button btn in dicDialogButtons[buttons])
@@ -80,6 +86,7 @@ namespace ISLibrary
             Question,
             Info
         }
+        #region Dictionaries initialization to assosiate them with proper enumeration
         private static Dictionary<DialogImage, Image> dicDialogImages = new Dictionary<DialogImage, Image>() 
         {         
             {DialogImage.Error,ISResources._48px_png_error},
@@ -151,6 +158,7 @@ namespace ISLibrary
                     }
                 }
             }
-        };
+        }; 
+        #endregion
     }
 }
