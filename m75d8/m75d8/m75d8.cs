@@ -16,7 +16,9 @@ namespace m75d8
             InitializeComponent();
             var directoryToSearchIn = "d:\\rasch";
             if (System.IO.Directory.Exists(directoryToSearchIn))
-                _textBox_mm75030Path.Text = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75030.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault();
+                _textBox_mm75030Path.Text = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75030.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault() ?? _textBox_mm75030Path.Text;
+            if (System.IO.Directory.Exists(directoryToSearchIn))
+                _textBox_mm75040Path.Text = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75040.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault() ?? _textBox_mm75040Path.Text;
 
             #region _toolStripButton_Exit Click
             _toolStripButton_Exit.Click += (s, e) =>
@@ -43,7 +45,7 @@ namespace m75d8
                 {
                     OpenFileDialog fd = new OpenFileDialog();
                     fd.Filter = "mm75030|mm75030.dbf";
-                    fd.InitialDirectory = Application.StartupPath;
+                    fd.InitialDirectory = (System.IO.Directory.Exists(directoryToSearchIn)) ? directoryToSearchIn : Application.StartupPath;
                     var result = fd.ShowDialog();
                     if (result == System.Windows.Forms.DialogResult.OK) _textBox_mm75030Path.Text = fd.FileName;
                 };
