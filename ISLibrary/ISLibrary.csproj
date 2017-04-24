@@ -112,6 +112,7 @@
   <ItemGroup>
     <Content Include="Resources\24px_png_double_arrow_left.png" />
     <Content Include="Resources\24px_png_double_arrow_right.png" />
+    <Content Include="Resources\24px_png_return.png" />
     <Content Include="Resources\24px_png_single_arrow_left.png" />
     <Content Include="Resources\24px_png_single_arrow_right.png" />
     <Content Include="Resources\prog.ico" />
