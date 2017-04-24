@@ -42,7 +42,7 @@
             this.lblMessage.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.Location = new System.Drawing.Point(91, 13);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(259, 81);
+            this.lblMessage.Size = new System.Drawing.Size(259, 75);
             this.lblMessage.TabIndex = 1;
             this.lblMessage.Text = "here shoud be an error text";
             // 
@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 158);
+            this.ClientSize = new System.Drawing.Size(362, 152);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.pictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
