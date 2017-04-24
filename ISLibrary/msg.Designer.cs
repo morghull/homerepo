@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 152);
+            this.ClientSize = new System.Drawing.Size(362, 158);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.pictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -68,6 +68,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(370, 190);
             this.Name = "msg";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "here shoud be an caption text";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

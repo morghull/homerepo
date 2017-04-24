@@ -29,48 +29,93 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(m75d8));
-            this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblGod = new System.Windows.Forms.Label();
-            this._dateTimePicker_Year = new System.Windows.Forms.DateTimePicker();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this._grpBox_Nc = new System.Windows.Forms.GroupBox();
-            this._radioButton_NcExclude = new System.Windows.Forms.RadioButton();
-            this._radioButton_NcInclude = new System.Windows.Forms.RadioButton();
-            this._radioButton_NcAll = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this._toolStrip = new System.Windows.Forms.ToolStrip();
             this._toolStripButton_Ok = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_XlsView = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_TxtView = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_Exit = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip.SuspendLayout();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblGod = new System.Windows.Forms.Label();
+            this._dateTimePicker_Year = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this._grpBox_Kiz = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this._grpBox_Nc = new System.Windows.Forms.GroupBox();
+            this._radioButton_NcExclude = new System.Windows.Forms.RadioButton();
+            this._radioButton_NcInclude = new System.Windows.Forms.RadioButton();
+            this._radioButton_NcAll = new System.Windows.Forms.RadioButton();
+            this._btnGetPathTo_mm75030 = new System.Windows.Forms.Button();
+            this._textBox_mm75030Path = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this._textBox_mm75040Path = new System.Windows.Forms.TextBox();
+            this._btnGetPathTo_mm75040 = new System.Windows.Forms.Button();
+            this._toolStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this._grpBox_Kiz.SuspendLayout();
             this._grpBox_Nc.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStrip
+            // _toolStrip
             // 
-            this.toolStrip.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this._toolStrip.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.toolStrip.AutoSize = false;
-            this.toolStrip.BackColor = System.Drawing.Color.Transparent;
-            this.toolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._toolStrip.AutoSize = false;
+            this._toolStrip.BackColor = System.Drawing.Color.Transparent;
+            this._toolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this._toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this._toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this._toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._toolStripButton_Ok,
             this._toolStripButton_XlsView,
             this._toolStripButton_TxtView,
             this._toolStripButton_Exit});
-            this.toolStrip.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(565, 31);
-            this.toolStrip.TabIndex = 1;
-            this.toolStrip.Text = "toolStrip1";
+            this._toolStrip.Location = new System.Drawing.Point(0, 0);
+            this._toolStrip.Name = "_toolStrip";
+            this._toolStrip.Size = new System.Drawing.Size(571, 31);
+            this._toolStrip.TabIndex = 1;
+            this._toolStrip.Text = "toolStrip1";
+            // 
+            // _toolStripButton_Ok
+            // 
+            this._toolStripButton_Ok.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_Ok.Image = global::m75d8.Properties.Resources._24px_png_ok;
+            this._toolStripButton_Ok.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_Ok.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
+            this._toolStripButton_Ok.Name = "_toolStripButton_Ok";
+            this._toolStripButton_Ok.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_Ok.Text = "Начать формирование xls-файла";
+            // 
+            // _toolStripButton_XlsView
+            // 
+            this._toolStripButton_XlsView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_XlsView.Enabled = false;
+            this._toolStripButton_XlsView.Image = global::m75d8.Properties.Resources._24px_png_print_xls;
+            this._toolStripButton_XlsView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_XlsView.Name = "_toolStripButton_XlsView";
+            this._toolStripButton_XlsView.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_XlsView.Text = "Просмотреть сформированный xls-файл";
+            // 
+            // _toolStripButton_TxtView
+            // 
+            this._toolStripButton_TxtView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_TxtView.Enabled = false;
+            this._toolStripButton_TxtView.Image = global::m75d8.Properties.Resources._24px_png_view;
+            this._toolStripButton_TxtView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_TxtView.Name = "_toolStripButton_TxtView";
+            this._toolStripButton_TxtView.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_TxtView.Text = "Просмотреть протокол работы";
+            // 
+            // _toolStripButton_Exit
+            // 
+            this._toolStripButton_Exit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_Exit.Image = global::m75d8.Properties.Resources._24px_png_exit;
+            this._toolStripButton_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_Exit.Name = "_toolStripButton_Exit";
+            this._toolStripButton_Exit.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_Exit.Text = "Выйти из программы";
             // 
             // lblTitle
             // 
@@ -87,7 +132,7 @@
             // 
             this.lblGod.AutoSize = true;
             this.lblGod.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblGod.Location = new System.Drawing.Point(61, 67);
+            this.lblGod.Location = new System.Drawing.Point(61, 62);
             this.lblGod.Name = "lblGod";
             this.lblGod.Size = new System.Drawing.Size(49, 16);
             this.lblGod.TabIndex = 3;
@@ -98,7 +143,7 @@
             this._dateTimePicker_Year.CustomFormat = "yyyy";
             this._dateTimePicker_Year.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this._dateTimePicker_Year.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this._dateTimePicker_Year.Location = new System.Drawing.Point(115, 65);
+            this._dateTimePicker_Year.Location = new System.Drawing.Point(115, 60);
             this._dateTimePicker_Year.Name = "_dateTimePicker_Year";
             this._dateTimePicker_Year.ShowUpDown = true;
             this._dateTimePicker_Year.Size = new System.Drawing.Size(54, 23);
@@ -111,15 +156,61 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this._grpBox_Kiz, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this._grpBox_Nc, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 92);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 153);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 104F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 104);
             this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // _grpBox_Kiz
+            // 
+            this._grpBox_Kiz.Controls.Add(this.radioButton1);
+            this._grpBox_Kiz.Controls.Add(this.radioButton2);
+            this._grpBox_Kiz.Controls.Add(this.radioButton3);
+            this._grpBox_Kiz.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._grpBox_Kiz.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._grpBox_Kiz.Location = new System.Drawing.Point(272, 3);
+            this._grpBox_Kiz.Name = "_grpBox_Kiz";
+            this._grpBox_Kiz.Size = new System.Drawing.Size(264, 98);
+            this._grpBox_Kiz.TabIndex = 7;
+            this._grpBox_Kiz.TabStop = false;
+            this._grpBox_Kiz.Text = "Номер цеха";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 68);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(177, 20);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.Text = "За исключением цехов";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 45);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(163, 20);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.Text = "По указанным цехам";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.Location = new System.Drawing.Point(6, 22);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(124, 20);
+            this.radioButton3.TabIndex = 0;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "По всем цехам";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // _grpBox_Nc
             // 
@@ -167,116 +258,103 @@
             this._radioButton_NcAll.Text = "По всем цехам";
             this._radioButton_NcAll.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // _btnGetPathTo_mm75030
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(272, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(264, 98);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Номер цеха";
+            this._btnGetPathTo_mm75030.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnGetPathTo_mm75030.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._btnGetPathTo_mm75030.Location = new System.Drawing.Point(528, 90);
+            this._btnGetPathTo_mm75030.Name = "_btnGetPathTo_mm75030";
+            this._btnGetPathTo_mm75030.Size = new System.Drawing.Size(24, 24);
+            this._btnGetPathTo_mm75030.TabIndex = 8;
+            this._btnGetPathTo_mm75030.Text = "...";
+            this._btnGetPathTo_mm75030.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // _textBox_mm75030Path
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 68);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(177, 20);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.Text = "За исключением цехов";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this._textBox_mm75030Path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._textBox_mm75030Path.Enabled = false;
+            this._textBox_mm75030Path.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._textBox_mm75030Path.Location = new System.Drawing.Point(160, 91);
+            this._textBox_mm75030Path.Name = "_textBox_mm75030Path";
+            this._textBox_mm75030Path.Size = new System.Drawing.Size(362, 23);
+            this._textBox_mm75030Path.TabIndex = 9;
+            this._textBox_mm75030Path.Text = "укажите путь к файлу mm76030.dbf";
             // 
-            // radioButton2
+            // label1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 45);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(163, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "По указанным цехам";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(15, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "путь к mm75030.dbf";
             // 
-            // radioButton3
+            // label2
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 22);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(124, 20);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "По всем цехам";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(15, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 16);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "путь к mm75040.dbf";
             // 
-            // _toolStripButton_Ok
+            // _textBox_mm75040Path
             // 
-            this._toolStripButton_Ok.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_Ok.Image = global::m75d8.Properties.Resources._24px_png_ok;
-            this._toolStripButton_Ok.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolStripButton_Ok.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
-            this._toolStripButton_Ok.Name = "_toolStripButton_Ok";
-            this._toolStripButton_Ok.Size = new System.Drawing.Size(28, 28);
-            this._toolStripButton_Ok.Text = "Начать формирование xls-файла";
+            this._textBox_mm75040Path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._textBox_mm75040Path.Enabled = false;
+            this._textBox_mm75040Path.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._textBox_mm75040Path.Location = new System.Drawing.Point(160, 122);
+            this._textBox_mm75040Path.Name = "_textBox_mm75040Path";
+            this._textBox_mm75040Path.Size = new System.Drawing.Size(362, 23);
+            this._textBox_mm75040Path.TabIndex = 12;
+            this._textBox_mm75040Path.Text = "укажите путь к файлу mm76040.dbf";
             // 
-            // _toolStripButton_XlsView
+            // _btnGetPathTo_mm75040
             // 
-            this._toolStripButton_XlsView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_XlsView.Enabled = false;
-            this._toolStripButton_XlsView.Image = global::m75d8.Properties.Resources._24px_png_print_xls;
-            this._toolStripButton_XlsView.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolStripButton_XlsView.Name = "_toolStripButton_XlsView";
-            this._toolStripButton_XlsView.Size = new System.Drawing.Size(28, 28);
-            this._toolStripButton_XlsView.Text = "Просмотреть сформированный xls-файл";
-            // 
-            // _toolStripButton_TxtView
-            // 
-            this._toolStripButton_TxtView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_TxtView.Enabled = false;
-            this._toolStripButton_TxtView.Image = global::m75d8.Properties.Resources._24px_png_view;
-            this._toolStripButton_TxtView.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolStripButton_TxtView.Name = "_toolStripButton_TxtView";
-            this._toolStripButton_TxtView.Size = new System.Drawing.Size(28, 28);
-            this._toolStripButton_TxtView.Text = "Просмотреть протокол работы";
-            // 
-            // _toolStripButton_Exit
-            // 
-            this._toolStripButton_Exit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_Exit.Image = global::m75d8.Properties.Resources._24px_png_exit;
-            this._toolStripButton_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolStripButton_Exit.Name = "_toolStripButton_Exit";
-            this._toolStripButton_Exit.Size = new System.Drawing.Size(28, 28);
-            this._toolStripButton_Exit.Text = "Выйти из программы";
+            this._btnGetPathTo_mm75040.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnGetPathTo_mm75040.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._btnGetPathTo_mm75040.Location = new System.Drawing.Point(528, 121);
+            this._btnGetPathTo_mm75040.Name = "_btnGetPathTo_mm75040";
+            this._btnGetPathTo_mm75040.Size = new System.Drawing.Size(24, 24);
+            this._btnGetPathTo_mm75040.TabIndex = 11;
+            this._btnGetPathTo_mm75040.Text = "...";
+            this._btnGetPathTo_mm75040.UseVisualStyleBackColor = true;
             // 
             // m75d8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 208);
+            this.ClientSize = new System.Drawing.Size(570, 275);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this._textBox_mm75040Path);
+            this.Controls.Add(this._btnGetPathTo_mm75040);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this._textBox_mm75030Path);
+            this.Controls.Add(this._btnGetPathTo_mm75030);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this._dateTimePicker_Year);
             this.Controls.Add(this.lblGod);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.toolStrip);
+            this.Controls.Add(this._toolStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1000, 246);
+            this.MaximumSize = new System.Drawing.Size(1000, 307);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(580, 246);
+            this.MinimumSize = new System.Drawing.Size(580, 307);
             this.Name = "m75d8";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Потребность в материалах на год. Цеха. Изделия. XLS-файл. Формирование";
-            this.toolStrip.ResumeLayout(false);
-            this.toolStrip.PerformLayout();
+            this._toolStrip.ResumeLayout(false);
+            this._toolStrip.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this._grpBox_Kiz.ResumeLayout(false);
+            this._grpBox_Kiz.PerformLayout();
             this._grpBox_Nc.ResumeLayout(false);
             this._grpBox_Nc.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,7 +362,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStrip _toolStrip;
         private System.Windows.Forms.ToolStripButton _toolStripButton_Ok;
         private System.Windows.Forms.ToolStripButton _toolStripButton_XlsView;
         private System.Windows.Forms.ToolStripButton _toolStripButton_TxtView;
@@ -293,7 +371,7 @@
         private System.Windows.Forms.Label lblGod;
         private System.Windows.Forms.DateTimePicker _dateTimePicker_Year;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox _grpBox_Kiz;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -301,6 +379,12 @@
         private System.Windows.Forms.RadioButton _radioButton_NcExclude;
         private System.Windows.Forms.RadioButton _radioButton_NcInclude;
         private System.Windows.Forms.RadioButton _radioButton_NcAll;
+        private System.Windows.Forms.Button _btnGetPathTo_mm75030;
+        private System.Windows.Forms.TextBox _textBox_mm75030Path;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox _textBox_mm75040Path;
+        private System.Windows.Forms.Button _btnGetPathTo_mm75040;
     }
 }
 

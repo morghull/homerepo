@@ -28,6 +28,15 @@ namespace m75d8
                 var result = ISLibrary.select.Show(dt);
                 if (result.Rows.Count == 0) _radioButton_NcAll.Checked = true;
             };
+            _btnGetPathTo_mm75030.Click += (s, e) =>
+            {
+                OpenFileDialog fd = new OpenFileDialog();
+                fd.Filter = "mm75030|mm75030.dbf";
+                fd.InitialDirectory = Application.StartupPath;
+                var result = fd.ShowDialog();
+                if (result == System.Windows.Forms.DialogResult.OK) _textBox_mm75030Path.Text = fd.FileName;
+            };
+            //System.IO.Directory.GetFiles("","");
         }
     }
 }
