@@ -23,6 +23,8 @@ namespace ISLibrary
         {
             select sel = new select();
             sel._dataGridView_Left.DataSource = dtSource;
+            //sel._dataGridView_Left.Columns.GetLastColumn(DataGridViewElementStates.Visible, DataGridViewElementStates.None).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //sel._dataGridView_Left.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             var dt_right = dtSource.Clone();
             sel._dataGridView_Right.DataSource = dt_right;
             sel.ShowDialog();
