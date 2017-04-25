@@ -15,22 +15,14 @@ namespace m75d8
         {
             InitializeComponent();
             var directoryToSearchIn = "d:\\rasch";//to start seaching in this directory
-            Dictionary<string, string> filePathes = new Dictionary<string,string>();
-            string filePath_mm75030 = null, filePath_mm75040 = null;
-
-            if (System.IO.Directory.Exists(directoryToSearchIn))
-            {
-                filePath_mm75030 = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75030.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault();
-                filePath_mm75040 = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75040.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault();
-            }
-            _textBox_mm75030Path.Text = filePath_mm75030 ?? _textBox_mm75030Path.Text;
-            _textBox_mm75040Path.Text = filePath_mm75040 ?? _textBox_mm75040Path.Text;
+            Dictionary<string, string> filePathes = new Dictionary<string, string>();
 
             foreach (var item in new List<string>() { "mm75030.dbf", "mm75040.dbf" })
             {
-
+                filePathes.Add(item, System.IO.Directory.Exists(directoryToSearchIn) ? System.IO.Directory.GetFiles(directoryToSearchIn, item, System.IO.SearchOption.AllDirectories).FirstOrDefault() : null);
             }
-
+            _textBox_mm75030Path.Text = filePathes["mm75030.dbf"] ?? _textBox_mm75030Path.Text;
+            _textBox_mm75040Path.Text = filePathes["mm75040.dbf"] ?? _textBox_mm75040Path.Text;
             #region _toolStripButton_Exit Click
             _toolStripButton_Exit.Click += (s, e) =>
                 {
@@ -51,43 +43,32 @@ namespace m75d8
                     if (result.Rows.Count == 0) _radioButton_NcAll.Checked = true;
                 };
             #endregion
-            #region _btnGetPathTo_mm75030 Click
-            _btnGetPathTo_mm75030.Click += (s, e) =>
+            #region Click handlers for buttons with OpenFileDialog
+            var list = new[]
+            {
+                new { fileName = "mm75030.dbf", button = _btnGetPathTo_mm75030 },
+                new { fileName = "mm75040.dbf", button = _btnGetPathTo_mm75040 }
+            };
+            foreach (var obj in list)
+            {
+                obj.button.Click += (s, e) =>
                 {
                     var initialDirectoryForFileDialog = "";
                     //if we found more then one file and picked wrong one
-                    if (filePath_mm75030 != null) initialDirectoryForFileDialog = System.IO.Path.GetDirectoryName(filePath_mm75030);
+                    if (filePathes[obj.fileName] != null) initialDirectoryForFileDialog = System.IO.Path.GetDirectoryName(filePathes[obj.fileName]);
                     //if we didn't found any
                     else if (System.IO.Directory.Exists(directoryToSearchIn)) initialDirectoryForFileDialog = directoryToSearchIn;
                     //if we have wrong start directory to search in
                     else initialDirectoryForFileDialog = Application.StartupPath;
                     OpenFileDialog fd = new OpenFileDialog()
                     {
-                        Filter = "mm75030|mm75030.dbf",
+                        Filter = System.IO.Path.GetFileNameWithoutExtension(obj.fileName) + "|" + obj.fileName,
                         InitialDirectory = initialDirectoryForFileDialog
                     };
                     var result = fd.ShowDialog();
                     if (result == System.Windows.Forms.DialogResult.OK) _textBox_mm75030Path.Text = fd.FileName;
                 };
-            #endregion
-            #region _btnGetPathTo_mm75040 Click
-            _btnGetPathTo_mm75040.Click += (s, e) =>
-            {
-                var initialDirectoryForFileDialog = "";
-                //if we found more then one file and picked wrong one
-                if (filePath_mm75040 != null) initialDirectoryForFileDialog = System.IO.Path.GetDirectoryName(filePath_mm75040);
-                //if we didn't found any
-                else if (System.IO.Directory.Exists(directoryToSearchIn)) initialDirectoryForFileDialog = directoryToSearchIn;
-                //if we have wrong start directory to search in
-                else initialDirectoryForFileDialog = Application.StartupPath;
-                OpenFileDialog fd = new OpenFileDialog()
-                {
-                    Filter = "mm75040|mm75040.dbf",
-                    InitialDirectory = initialDirectoryForFileDialog
-                };
-                var result = fd.ShowDialog();
-                if (result == System.Windows.Forms.DialogResult.OK) _textBox_mm75040Path.Text = fd.FileName;
-            };
+            }
             #endregion
         }
     }
