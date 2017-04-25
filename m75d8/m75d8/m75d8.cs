@@ -14,11 +14,22 @@ namespace m75d8
         public m75d8()
         {
             InitializeComponent();
-            var directoryToSearchIn = "d:\\rasch";
+            var directoryToSearchIn = "d:\\rasch";//to start seaching in this directory
+            Dictionary<string, string> filePathes = new Dictionary<string,string>();
+            string filePath_mm75030 = null, filePath_mm75040 = null;
+
             if (System.IO.Directory.Exists(directoryToSearchIn))
-                _textBox_mm75030Path.Text = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75030.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault() ?? _textBox_mm75030Path.Text;
-            if (System.IO.Directory.Exists(directoryToSearchIn))
-                _textBox_mm75040Path.Text = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75040.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault() ?? _textBox_mm75040Path.Text;
+            {
+                filePath_mm75030 = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75030.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault();
+                filePath_mm75040 = System.IO.Directory.GetFiles(directoryToSearchIn, "mm75040.dbf", System.IO.SearchOption.AllDirectories).FirstOrDefault();
+            }
+            _textBox_mm75030Path.Text = filePath_mm75030 ?? _textBox_mm75030Path.Text;
+            _textBox_mm75040Path.Text = filePath_mm75040 ?? _textBox_mm75040Path.Text;
+
+            foreach (var item in new List<string>() { "mm75030.dbf", "mm75040.dbf" })
+            {
+
+            }
 
             #region _toolStripButton_Exit Click
             _toolStripButton_Exit.Click += (s, e) =>
@@ -43,12 +54,40 @@ namespace m75d8
             #region _btnGetPathTo_mm75030 Click
             _btnGetPathTo_mm75030.Click += (s, e) =>
                 {
-                    OpenFileDialog fd = new OpenFileDialog();
-                    fd.Filter = "mm75030|mm75030.dbf";
-                    fd.InitialDirectory = (System.IO.Directory.Exists(directoryToSearchIn)) ? directoryToSearchIn : Application.StartupPath;
+                    var initialDirectoryForFileDialog = "";
+                    //if we found more then one file and picked wrong one
+                    if (filePath_mm75030 != null) initialDirectoryForFileDialog = System.IO.Path.GetDirectoryName(filePath_mm75030);
+                    //if we didn't found any
+                    else if (System.IO.Directory.Exists(directoryToSearchIn)) initialDirectoryForFileDialog = directoryToSearchIn;
+                    //if we have wrong start directory to search in
+                    else initialDirectoryForFileDialog = Application.StartupPath;
+                    OpenFileDialog fd = new OpenFileDialog()
+                    {
+                        Filter = "mm75030|mm75030.dbf",
+                        InitialDirectory = initialDirectoryForFileDialog
+                    };
                     var result = fd.ShowDialog();
                     if (result == System.Windows.Forms.DialogResult.OK) _textBox_mm75030Path.Text = fd.FileName;
                 };
+            #endregion
+            #region _btnGetPathTo_mm75040 Click
+            _btnGetPathTo_mm75040.Click += (s, e) =>
+            {
+                var initialDirectoryForFileDialog = "";
+                //if we found more then one file and picked wrong one
+                if (filePath_mm75040 != null) initialDirectoryForFileDialog = System.IO.Path.GetDirectoryName(filePath_mm75040);
+                //if we didn't found any
+                else if (System.IO.Directory.Exists(directoryToSearchIn)) initialDirectoryForFileDialog = directoryToSearchIn;
+                //if we have wrong start directory to search in
+                else initialDirectoryForFileDialog = Application.StartupPath;
+                OpenFileDialog fd = new OpenFileDialog()
+                {
+                    Filter = "mm75040|mm75040.dbf",
+                    InitialDirectory = initialDirectoryForFileDialog
+                };
+                var result = fd.ShowDialog();
+                if (result == System.Windows.Forms.DialogResult.OK) _textBox_mm75040Path.Text = fd.FileName;
+            };
             #endregion
         }
     }
