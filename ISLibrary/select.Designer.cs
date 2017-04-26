@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this._toolStrip_Horizontal = new System.Windows.Forms.ToolStrip();
             this._dataGridView_Left = new System.Windows.Forms.DataGridView();
             this._dataGridView_Right = new System.Windows.Forms.DataGridView();
             this._toolStrip_Vertical = new System.Windows.Forms.ToolStrip();
-            this._toolStripButton_Ok = new System.Windows.Forms.ToolStripButton();
-            this._toolStripButton_Cancel = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_SingleRight = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_DoubleRight = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_SingleLeft = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_DoubleLeft = new System.Windows.Forms.ToolStripButton();
+            this._toolStrip_Horizontal = new System.Windows.Forms.ToolStrip();
+            this._toolStripButton_Ok = new System.Windows.Forms.ToolStripButton();
+            this._toolStripButton_Cancel = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1.SuspendLayout();
-            this._toolStrip_Horizontal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView_Left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView_Right)).BeginInit();
             this._toolStrip_Vertical.SuspendLayout();
+            this._toolStrip_Horizontal.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -63,26 +63,8 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 322F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(929, 322);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(840, 322);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // _toolStrip_Horizontal
-            // 
-            this._toolStrip_Horizontal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._toolStrip_Horizontal.AutoSize = false;
-            this._toolStrip_Horizontal.BackColor = System.Drawing.Color.Transparent;
-            this._toolStrip_Horizontal.Dock = System.Windows.Forms.DockStyle.None;
-            this._toolStrip_Horizontal.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this._toolStrip_Horizontal.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this._toolStrip_Horizontal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this._toolStripButton_Ok,
-            this._toolStripButton_Cancel});
-            this._toolStrip_Horizontal.Location = new System.Drawing.Point(0, 0);
-            this._toolStrip_Horizontal.Name = "_toolStrip_Horizontal";
-            this._toolStrip_Horizontal.Size = new System.Drawing.Size(932, 31);
-            this._toolStrip_Horizontal.TabIndex = 1;
-            this._toolStrip_Horizontal.Text = "_toolStrip_Horizontal";
             // 
             // _dataGridView_Left
             // 
@@ -94,7 +76,7 @@
             this._dataGridView_Left.Name = "_dataGridView_Left";
             this._dataGridView_Left.RowHeadersVisible = false;
             this._dataGridView_Left.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this._dataGridView_Left.Size = new System.Drawing.Size(443, 316);
+            this._dataGridView_Left.Size = new System.Drawing.Size(399, 316);
             this._dataGridView_Left.TabIndex = 1;
             // 
             // _dataGridView_Right
@@ -103,11 +85,11 @@
             this._dataGridView_Right.AllowUserToDeleteRows = false;
             this._dataGridView_Right.AllowUserToResizeRows = false;
             this._dataGridView_Right.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._dataGridView_Right.Location = new System.Drawing.Point(482, 3);
+            this._dataGridView_Right.Location = new System.Drawing.Point(438, 3);
             this._dataGridView_Right.Name = "_dataGridView_Right";
             this._dataGridView_Right.RowHeadersVisible = false;
             this._dataGridView_Right.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this._dataGridView_Right.Size = new System.Drawing.Size(444, 316);
+            this._dataGridView_Right.Size = new System.Drawing.Size(399, 316);
             this._dataGridView_Right.TabIndex = 2;
             // 
             // _toolStrip_Vertical
@@ -121,31 +103,12 @@
             this._toolStripButton_SingleLeft,
             this._toolStripButton_DoubleLeft});
             this._toolStrip_Vertical.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this._toolStrip_Vertical.Location = new System.Drawing.Point(450, 0);
+            this._toolStrip_Vertical.Location = new System.Drawing.Point(406, 0);
             this._toolStrip_Vertical.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this._toolStrip_Vertical.Name = "_toolStrip_Vertical";
             this._toolStrip_Vertical.Size = new System.Drawing.Size(29, 175);
             this._toolStrip_Vertical.TabIndex = 3;
             this._toolStrip_Vertical.Text = "_toolStrip_Vertical";
-            // 
-            // _toolStripButton_Ok
-            // 
-            this._toolStripButton_Ok.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_Ok.Image = global::ISLibrary.ISResources._24px_png_ok;
-            this._toolStripButton_Ok.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolStripButton_Ok.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
-            this._toolStripButton_Ok.Name = "_toolStripButton_Ok";
-            this._toolStripButton_Ok.Size = new System.Drawing.Size(28, 28);
-            this._toolStripButton_Ok.Text = "_toolStripButton_Ok";
-            // 
-            // _toolStripButton_Cancel
-            // 
-            this._toolStripButton_Cancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_Cancel.Image = global::ISLibrary.ISResources._24px_png_no;
-            this._toolStripButton_Cancel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolStripButton_Cancel.Name = "_toolStripButton_Cancel";
-            this._toolStripButton_Cancel.Size = new System.Drawing.Size(28, 28);
-            this._toolStripButton_Cancel.Text = "_toolStripButton_Cancel";
             // 
             // _toolStripButton_SingleRight
             // 
@@ -184,11 +147,48 @@
             this._toolStripButton_DoubleLeft.Size = new System.Drawing.Size(27, 28);
             this._toolStripButton_DoubleLeft.Text = "Переместить выбраные строки в левую часть";
             // 
+            // _toolStrip_Horizontal
+            // 
+            this._toolStrip_Horizontal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._toolStrip_Horizontal.AutoSize = false;
+            this._toolStrip_Horizontal.BackColor = System.Drawing.Color.Transparent;
+            this._toolStrip_Horizontal.Dock = System.Windows.Forms.DockStyle.None;
+            this._toolStrip_Horizontal.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this._toolStrip_Horizontal.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this._toolStrip_Horizontal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._toolStripButton_Ok,
+            this._toolStripButton_Cancel});
+            this._toolStrip_Horizontal.Location = new System.Drawing.Point(0, 0);
+            this._toolStrip_Horizontal.Name = "_toolStrip_Horizontal";
+            this._toolStrip_Horizontal.Size = new System.Drawing.Size(843, 31);
+            this._toolStrip_Horizontal.TabIndex = 1;
+            this._toolStrip_Horizontal.Text = "_toolStrip_Horizontal";
+            // 
+            // _toolStripButton_Ok
+            // 
+            this._toolStripButton_Ok.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_Ok.Image = global::ISLibrary.ISResources._24px_png_ok;
+            this._toolStripButton_Ok.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_Ok.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
+            this._toolStripButton_Ok.Name = "_toolStripButton_Ok";
+            this._toolStripButton_Ok.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_Ok.Text = "_toolStripButton_Ok";
+            // 
+            // _toolStripButton_Cancel
+            // 
+            this._toolStripButton_Cancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_Cancel.Image = global::ISLibrary.ISResources._24px_png_no;
+            this._toolStripButton_Cancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_Cancel.Name = "_toolStripButton_Cancel";
+            this._toolStripButton_Cancel.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_Cancel.Text = "_toolStripButton_Cancel";
+            // 
             // select
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 357);
+            this.ClientSize = new System.Drawing.Size(842, 357);
             this.Controls.Add(this._toolStrip_Horizontal);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "select";
@@ -196,12 +196,12 @@
             this.Text = "select";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this._toolStrip_Horizontal.ResumeLayout(false);
-            this._toolStrip_Horizontal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView_Left)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView_Right)).EndInit();
             this._toolStrip_Vertical.ResumeLayout(false);
             this._toolStrip_Vertical.PerformLayout();
+            this._toolStrip_Horizontal.ResumeLayout(false);
+            this._toolStrip_Horizontal.PerformLayout();
             this.ResumeLayout(false);
 
         }
