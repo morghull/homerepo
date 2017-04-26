@@ -14,6 +14,8 @@ namespace ISLibrary
         public select()
         {
             InitializeComponent();
+            _dataGridView_Left.DoubleBuffered(true);
+            _dataGridView_Right.DoubleBuffered(true);
             _toolStripButton_Cancel.Click += (s, e) =>
             {
                 ((DataTable)_dataGridView_Right.DataSource).RejectChanges();
