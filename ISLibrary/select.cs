@@ -16,26 +16,62 @@ namespace ISLibrary
             InitializeComponent();
             _dataGridView_Left.DoubleBuffered(true);
             _dataGridView_Right.DoubleBuffered(true);
+            #region horizontal toolbar events
+            _toolStripButton_Ok.Click += (s, e) =>
+            {
+                ((DataTable)_dataGridView_Left.DataSource).AcceptChanges();
+                ((DataTable)_dataGridView_Right.DataSource).AcceptChanges();
+                this.Close();
+            };
             _toolStripButton_Cancel.Click += (s, e) =>
             {
                 ((DataTable)_dataGridView_Left.DataSource).RejectChanges();
                 ((DataTable)_dataGridView_Right.DataSource).RejectChanges();
                 this.Close();
             };
+            #endregion
+            #region vertical toolbar buttons events
             _toolStripButton_SingleRight.Click += (s, e) =>
             {
-                DataTable dtLeft = (DataTable)_dataGridView_Left.DataSource;
                 DataTable dtRight = (DataTable)_dataGridView_Right.DataSource;
                 foreach (DataGridViewRow row in _dataGridView_Left.SelectedRows)
                 {
                     DataRow dr = ((DataRowView)row.DataBoundItem).Row;
-                    dr.SetAdded();
-                    dtRight.ImportRow(dr);
+                    dtRight.Rows.Add(dr.ItemArray);
                     dr.Delete();
                 }
-                //dtRight.AcceptChanges();
-                //dtLeft.AcceptChanges();
             };
+            _toolStripButton_DoubleRight.Click += (s, e) =>
+            {
+                DataTable dtLeft = (DataTable)_dataGridView_Left.DataSource;
+                DataTable dtRight = (DataTable)_dataGridView_Right.DataSource;
+                foreach (DataRow row in dtLeft.Rows)
+                {
+                    dtRight.Rows.Add(row.ItemArray);
+                }
+                dtLeft.Rows.Clear();
+            };
+            _toolStripButton_DoubleLeft.Click += (s, e) =>
+            {
+                DataTable dtLeft = (DataTable)_dataGridView_Left.DataSource;
+                DataTable dtRight = (DataTable)_dataGridView_Right.DataSource;
+                foreach (DataRow row in dtRight.Rows)
+                {
+                    dtLeft.Rows.Add(row.ItemArray);
+                }
+                dtRight.Rows.Clear();
+            };
+            _toolStripButton_SingleLeft.Click += (s, e) =>
+            {
+                DataTable dtLeft = (DataTable)_dataGridView_Left.DataSource;
+                foreach (DataGridViewRow row in _dataGridView_Right.SelectedRows)
+                {
+                    DataRow dr = ((DataRowView)row.DataBoundItem).Row;
+                    dtLeft.Rows.Add(dr.ItemArray);
+                    dr.Delete();
+                }
+            };
+            #endregion
         }
         public static DataTable Show(DataTable dtSource)
         {

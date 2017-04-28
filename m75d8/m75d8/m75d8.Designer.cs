@@ -340,6 +340,7 @@
             this.Controls.Add(this.lblGod);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this._toolStrip);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1000, 307);

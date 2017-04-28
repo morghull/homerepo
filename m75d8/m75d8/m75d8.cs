@@ -25,23 +25,23 @@ namespace m75d8
             _textBox_mm75040Path.Text = filePathes["mm75040.dbf"] ?? _textBox_mm75040Path.Text;
             #region _toolStripButton_Exit Click
             _toolStripButton_Exit.Click += (s, e) =>
-                {
-                    if (ISLibrary.msg.Show("Желаете завершить работу с программой?", ISLibrary.msg.DialogButtons.YesNo, ISLibrary.msg.DialogImage.Question) == DialogResult.Yes) Application.Exit();
-                };
+            {
+                if (ISLibrary.msg.Show("Желаете завершить работу с программой?", ISLibrary.msg.DialogButtons.YesNo, ISLibrary.msg.DialogImage.Question) == DialogResult.Yes) Application.Exit();
+            };
             #endregion
             #region _toolStripButton_Ok Click
             _toolStripButton_Ok.Click += (s, e) =>
-                {
-                    ISLibrary.msg.Show("Ошибка при работе с SQL-сервером!", "Ошибка", ISLibrary.msg.DialogButtons.Ok, ISLibrary.msg.DialogImage.Error);
-                };
+            {
+                ISLibrary.msg.Show("Ошибка при работе с SQL-сервером!", "Ошибка", ISLibrary.msg.DialogButtons.Ok, ISLibrary.msg.DialogImage.Error);
+            };
             #endregion
             #region _radioButton_NcInclude Click
             _radioButton_NcInclude.Click += (s, e) =>
-                {
-                    var dt = DatabaseManager.doQuery(new Npgsql.NpgsqlCommand("select nceh,nc,kd from vd.tabceh order by nceh;"));
-                    var result = ISLibrary.select.Show(dt);
-                    if (result.Rows.Count == 0) _radioButton_NcAll.Checked = true;
-                };
+            {
+                var dt = DatabaseManager.doQuery(new Npgsql.NpgsqlCommand("select nceh,nc,kd from vd.tabceh order by nceh;"));
+                var result = ISLibrary.select.Show(dt);
+                if (result.Rows.Count == 0) _radioButton_NcAll.Checked = true;
+            };
             #endregion
             #region Click handlers for buttons with OpenFileDialog
             var list = new[]

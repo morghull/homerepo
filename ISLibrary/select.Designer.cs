@@ -34,8 +34,8 @@
             this._toolStrip_Vertical = new System.Windows.Forms.ToolStrip();
             this._toolStripButton_SingleRight = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_DoubleRight = new System.Windows.Forms.ToolStripButton();
-            this._toolStripButton_SingleLeft = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_DoubleLeft = new System.Windows.Forms.ToolStripButton();
+            this._toolStripButton_SingleLeft = new System.Windows.Forms.ToolStripButton();
             this._toolStrip_Horizontal = new System.Windows.Forms.ToolStrip();
             this._toolStripButton_Ok = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_Cancel = new System.Windows.Forms.ToolStripButton();
@@ -74,6 +74,7 @@
             this._dataGridView_Left.Dock = System.Windows.Forms.DockStyle.Fill;
             this._dataGridView_Left.Location = new System.Drawing.Point(3, 3);
             this._dataGridView_Left.Name = "_dataGridView_Left";
+            this._dataGridView_Left.ReadOnly = true;
             this._dataGridView_Left.RowHeadersVisible = false;
             this._dataGridView_Left.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this._dataGridView_Left.Size = new System.Drawing.Size(399, 316);
@@ -87,6 +88,7 @@
             this._dataGridView_Right.Dock = System.Windows.Forms.DockStyle.Fill;
             this._dataGridView_Right.Location = new System.Drawing.Point(438, 3);
             this._dataGridView_Right.Name = "_dataGridView_Right";
+            this._dataGridView_Right.ReadOnly = true;
             this._dataGridView_Right.RowHeadersVisible = false;
             this._dataGridView_Right.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this._dataGridView_Right.Size = new System.Drawing.Size(399, 316);
@@ -100,8 +102,8 @@
             this._toolStrip_Vertical.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._toolStripButton_SingleRight,
             this._toolStripButton_DoubleRight,
-            this._toolStripButton_SingleLeft,
-            this._toolStripButton_DoubleLeft});
+            this._toolStripButton_DoubleLeft,
+            this._toolStripButton_SingleLeft});
             this._toolStrip_Vertical.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this._toolStrip_Vertical.Location = new System.Drawing.Point(406, 0);
             this._toolStrip_Vertical.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
@@ -129,23 +131,23 @@
             this._toolStripButton_DoubleRight.Size = new System.Drawing.Size(27, 28);
             this._toolStripButton_DoubleRight.Text = "Переместить все строки в правую часть";
             // 
-            // _toolStripButton_SingleLeft
-            // 
-            this._toolStripButton_SingleLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_SingleLeft.Image = global::ISLibrary.ISResources._24px_png_double_arrow_left;
-            this._toolStripButton_SingleLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolStripButton_SingleLeft.Name = "_toolStripButton_SingleLeft";
-            this._toolStripButton_SingleLeft.Size = new System.Drawing.Size(27, 28);
-            this._toolStripButton_SingleLeft.Text = "Переместить все строки в левую часть";
-            // 
             // _toolStripButton_DoubleLeft
             // 
             this._toolStripButton_DoubleLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_DoubleLeft.Image = global::ISLibrary.ISResources._24px_png_single_arrow_left;
+            this._toolStripButton_DoubleLeft.Image = global::ISLibrary.ISResources._24px_png_double_arrow_left;
             this._toolStripButton_DoubleLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolStripButton_DoubleLeft.Name = "_toolStripButton_DoubleLeft";
             this._toolStripButton_DoubleLeft.Size = new System.Drawing.Size(27, 28);
-            this._toolStripButton_DoubleLeft.Text = "Переместить выбраные строки в левую часть";
+            this._toolStripButton_DoubleLeft.Text = "Переместить все строки в левую часть";
+            // 
+            // _toolStripButton_SingleLeft
+            // 
+            this._toolStripButton_SingleLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_SingleLeft.Image = global::ISLibrary.ISResources._24px_png_single_arrow_left;
+            this._toolStripButton_SingleLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_SingleLeft.Name = "_toolStripButton_SingleLeft";
+            this._toolStripButton_SingleLeft.Size = new System.Drawing.Size(27, 28);
+            this._toolStripButton_SingleLeft.Text = "Переместить выбраные строки в левую часть";
             // 
             // _toolStrip_Horizontal
             // 
@@ -191,6 +193,7 @@
             this.ClientSize = new System.Drawing.Size(842, 357);
             this.Controls.Add(this._toolStrip_Horizontal);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Name = "select";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "select";
@@ -217,8 +220,8 @@
         private System.Windows.Forms.ToolStrip _toolStrip_Vertical;
         private System.Windows.Forms.ToolStripButton _toolStripButton_SingleRight;
         private System.Windows.Forms.ToolStripButton _toolStripButton_DoubleRight;
-        private System.Windows.Forms.ToolStripButton _toolStripButton_SingleLeft;
         private System.Windows.Forms.ToolStripButton _toolStripButton_DoubleLeft;
+        private System.Windows.Forms.ToolStripButton _toolStripButton_SingleLeft;
 
 
     }
