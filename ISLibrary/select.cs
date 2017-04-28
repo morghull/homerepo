@@ -72,25 +72,27 @@ namespace ISLibrary
                 }
             };
             #endregion
+            //_dataGridView_Left.DoubleClick += (s, e) => { _toolStripButton_SingleRight.PerformClick(); };
+            //_dataGridView_Right.DoubleClick += (s, e) => { _toolStripButton_SingleLeft.PerformClick(); };
         }
-        public static DataTable Show(DataTable dtSource)
+        public static DataTable Show(DataTable dtSource_left, DataTable dtSource_right)
         {
             select sel = new select();
-            var dt_right = dtSource.Clone();
-            sel._dataGridView_Left.DataSource = dtSource;
-            sel._dataGridView_Right.DataSource = dt_right;
+            sel._dataGridView_Left.DataSource = dtSource_left;
+            sel._dataGridView_Right.DataSource = dtSource_right;
             sel._dataGridView_Left.Sort(sel._dataGridView_Left.Columns[0], ListSortDirection.Ascending);
             sel._dataGridView_Right.Sort(sel._dataGridView_Right.Columns[0], ListSortDirection.Ascending);
+            DataTable dtTableWithMaximunRows = (dtSource_left.Rows.Count >= dtSource_right.Rows.Count) ? dtSource_left : dtSource_right;
             var maximumLengthForColumns =
-                Enumerable.Range(0, dtSource.Columns.Count)
-                .Select(col => dtSource.AsEnumerable()
+                Enumerable.Range(0, dtTableWithMaximunRows.Columns.Count)
+                .Select(col => dtTableWithMaximunRows.AsEnumerable()
                                      .Select(row => row[col]).OfType<string>()
                                      .Max(val => val.Length)).ToList();
             var maxColumnIndex = maximumLengthForColumns.IndexOf(maximumLengthForColumns.Max());
             sel._dataGridView_Left.Columns[(maximumLengthForColumns.Max() > 15) ? maxColumnIndex : sel._dataGridView_Left.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             sel._dataGridView_Right.Columns[(maximumLengthForColumns.Max() > 15) ? maxColumnIndex : sel._dataGridView_Right.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             sel.ShowDialog();
-            return dt_right;
+            return dtSource_right;
         }
     }
 }

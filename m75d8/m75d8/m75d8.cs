@@ -11,6 +11,7 @@ namespace m75d8
 {
     public partial class m75d8 : Form
     {
+        private DataSet ds = new DataSet();
         public m75d8()
         {
             InitializeComponent();
@@ -38,8 +39,19 @@ namespace m75d8
             #region _radioButton_NcInclude Click
             _radioButton_NcInclude.Click += (s, e) =>
             {
-                var dt = DatabaseManager.doQuery(new Npgsql.NpgsqlCommand("select nceh,nc,kd from vd.tabceh order by nceh;"));
-                var result = ISLibrary.select.Show(dt);
+                if (!ds.Tables.Contains("dtNceh_left"))
+                {
+                    var dt = DatabaseManager.doQuery(new Npgsql.NpgsqlCommand("select nceh,nc,kd from vd.tabceh order by nceh;"));
+                    dt.TableName = "dtNceh_left";
+                    ds.Tables.Add(dt);
+                }
+                if (!ds.Tables.Contains("dtNceh_right"))
+                {
+                    var dt = ds.Tables["dtNceh_left"].Clone();
+                    dt.TableName = "dtNceh_right";
+                    ds.Tables.Add(dt);
+                }
+                var result = ISLibrary.select.Show(ds.Tables["dtNceh_left"], ds.Tables["dtNceh_right"]);
                 if (result.Rows.Count == 0) _radioButton_NcAll.Checked = true;
             };
             #endregion
