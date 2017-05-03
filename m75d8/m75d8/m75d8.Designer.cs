@@ -52,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this._textBox_mm75040Path = new System.Windows.Forms.TextBox();
             this._btnGetPathTo_mm75040 = new System.Windows.Forms.Button();
+            this._toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
             this._toolStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this._grpBox_Kiz.SuspendLayout();
@@ -71,7 +72,8 @@
             this._toolStripButton_Ok,
             this._toolStripButton_XlsView,
             this._toolStripButton_TxtView,
-            this._toolStripButton_Exit});
+            this._toolStripButton_Exit,
+            this._toolStripButton_Settings});
             this._toolStrip.Location = new System.Drawing.Point(0, 0);
             this._toolStrip.Name = "_toolStrip";
             this._toolStrip.Size = new System.Drawing.Size(571, 31);
@@ -324,11 +326,21 @@
             this._btnGetPathTo_mm75040.Text = "...";
             this._btnGetPathTo_mm75040.UseVisualStyleBackColor = true;
             // 
+            // _toolStripButton_Settings
+            // 
+            this._toolStripButton_Settings.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this._toolStripButton_Settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_Settings.Image = global::m75d8.Properties.Resources._24px_png_settings;
+            this._toolStripButton_Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_Settings.Name = "_toolStripButton_Settings";
+            this._toolStripButton_Settings.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_Settings.Text = "toolStripButton1";
+            // 
             // m75d8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 275);
+            this.ClientSize = new System.Drawing.Size(570, 269);
             this.Controls.Add(this.label2);
             this.Controls.Add(this._textBox_mm75040Path);
             this.Controls.Add(this._btnGetPathTo_mm75040);
@@ -386,6 +398,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox _textBox_mm75040Path;
         private System.Windows.Forms.Button _btnGetPathTo_mm75040;
+        private System.Windows.Forms.ToolStripButton _toolStripButton_Settings;
     }
 }
 

@@ -15,7 +15,7 @@ namespace m75d8
         public m75d8()
         {
             InitializeComponent();
-            var directoryToSearchIn = "d:\\rasch";//to start seaching in this directory
+            var directoryToSearchIn = Properties.Settings.Default["DirectoryToSearchIn"].ToString();//to start seaching in this directory
             Dictionary<string, string> filePathes = new Dictionary<string, string>();
 
             foreach (var item in new List<string>() { "mm75030.dbf", "mm75040.dbf" })
@@ -28,6 +28,12 @@ namespace m75d8
             _toolStripButton_Exit.Click += (s, e) =>
             {
                 if (ISLibrary.msg.Show("Желаете завершить работу с программой?", ISLibrary.msg.DialogButtons.YesNo, ISLibrary.msg.DialogImage.Question) == DialogResult.Yes) Application.Exit();
+            };
+            #endregion
+            #region _toolStripButton_Settings Click
+            _toolStripButton_Settings.Click += (s, e) =>
+            {
+                settings._Show();
             };
             #endregion
             #region _toolStripButton_Ok Click
