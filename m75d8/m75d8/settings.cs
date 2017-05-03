@@ -15,6 +15,8 @@ namespace m75d8
         {
             InitializeComponent();
             _textBox_Password.PasswordChar = (char)0x25CF;//'●'
+            this._textBox_DirToSearchIn.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::m75d8.Properties.Settings.Default, "DirectoryToSearchIn", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this._textBox_DirToSearchIn.Text = global::m75d8.Properties.Settings.Default.DirectoryToSearchIn;
             #region buttons event handlers
             _toolStripButton_Ok.Click += (s, e) =>
             {

@@ -334,7 +334,7 @@
             this._toolStripButton_Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolStripButton_Settings.Name = "_toolStripButton_Settings";
             this._toolStripButton_Settings.Size = new System.Drawing.Size(28, 28);
-            this._toolStripButton_Settings.Text = "toolStripButton1";
+            this._toolStripButton_Settings.Text = "Открыть настройки программы";
             // 
             // m75d8
             // 
