@@ -15,6 +15,8 @@ namespace m75d8
         public m75d8()
         {
             InitializeComponent();
+            ISLibrary.GlobalSettings gs = ISLibrary.GlobalSettings.ReadFromXml("");
+            gs.WriteToXml("");
             var directoryToSearchIn = Properties.Settings.Default["DirectoryToSearchIn"].ToString();//to start seaching in this directory
             Dictionary<string, string> filePathes = new Dictionary<string, string>();
 
@@ -33,7 +35,7 @@ namespace m75d8
             #region _toolStripButton_Settings Click
             _toolStripButton_Settings.Click += (s, e) =>
             {
-                settings._Show();
+                settings.CreateNewAnShow();
             };
             #endregion
             #region _toolStripButton_Ok Click
@@ -78,13 +80,13 @@ namespace m75d8
                     else if (System.IO.Directory.Exists(directoryToSearchIn)) initialDirectoryForFileDialog = directoryToSearchIn;
                     //if we have wrong start directory to search in
                     else initialDirectoryForFileDialog = Application.StartupPath;
-                    OpenFileDialog fd = new OpenFileDialog()
+                    using (OpenFileDialog fd = new OpenFileDialog())
                     {
-                        Filter = System.IO.Path.GetFileNameWithoutExtension(obj.fileName) + "|" + obj.fileName,
-                        InitialDirectory = initialDirectoryForFileDialog
+                        fd.Filter = System.IO.Path.GetFileNameWithoutExtension(obj.fileName) + "|" + obj.fileName;
+                        fd.InitialDirectory = initialDirectoryForFileDialog;
+                        fd.Title = "Открыть " + obj.fileName;
+                        if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK) _textBox_mm75030Path.Text = fd.FileName;
                     };
-                    var result = fd.ShowDialog();
-                    if (result == System.Windows.Forms.DialogResult.OK) _textBox_mm75030Path.Text = fd.FileName;
                 };
             }
             #endregion

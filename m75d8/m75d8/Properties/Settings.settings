@@ -5,5 +5,8 @@
     <Setting Name="DirectoryToSearchIn" Type="System.String" Scope="User">
       <Value Profile="(Default)">d:\rasch</Value>
     </Setting>
+    <Setting Name="PathToSettingsXml" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\ant\appsettings\global.xml</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -34,5 +34,17 @@ namespace m75d8.Properties {
                 this["DirectoryToSearchIn"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\ant\\appsettings\\global.xml")]
+        public string PathToSettingsXml {
+            get {
+                return ((string)(this["PathToSettingsXml"]));
+            }
+            set {
+                this["PathToSettingsXml"] = value;
+            }
+        }
     }
 }

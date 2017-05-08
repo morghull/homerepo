@@ -14,9 +14,10 @@ namespace m75d8
         public settings()
         {
             InitializeComponent();
-            _textBox_Password.PasswordChar = (char)0x25CF;//'●'
             this._textBox_DirToSearchIn.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::m75d8.Properties.Settings.Default, "DirectoryToSearchIn", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this._textBox_DirToSearchIn.Text = global::m75d8.Properties.Settings.Default.DirectoryToSearchIn;
+            this._textBox_PathToSettingsXml.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::m75d8.Properties.Settings.Default, "PathToSettingsXml", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this._textBox_PathToSettingsXml.Text = global::m75d8.Properties.Settings.Default.PathToSettingsXml;
             #region buttons event handlers
             _toolStripButton_Ok.Click += (s, e) =>
             {
@@ -35,9 +36,20 @@ namespace m75d8
                 };
                 if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK) _textBox_DirToSearchIn.Text = fd.SelectedPath.ToLower();
             };
+            _btnGetPathToSettingsXml.Click += (s, e) =>
+            {
+                using (OpenFileDialog fd = new OpenFileDialog())
+                {
+                    var dirName = (_textBox_PathToSettingsXml.Text != String.Empty) ? System.IO.Path.GetDirectoryName(_textBox_PathToSettingsXml.Text) : "";
+                    fd.Filter = "XML-файлы|*.xml";
+                    fd.Title = "Открыть файл настроек";
+                    fd.InitialDirectory = (dirName != String.Empty && System.IO.Directory.Exists(dirName)) ? dirName : Application.StartupPath;
+                    if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK) _textBox_PathToSettingsXml.Text = fd.FileName;
+                }
+            };
             #endregion
         }
-        public static DialogResult _Show()
+        public static DialogResult CreateNewAnShow()
         {
             settings settings = new settings();
             var result = settings.ShowDialog();
