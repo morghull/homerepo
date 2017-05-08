@@ -45,10 +45,10 @@
     <Compile Include="Encryptor.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="ImageListWrapper.cs" />
-    <Compile Include="msg.cs">
+    <Compile Include="forms\msg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="msg.Designer.cs">
+    <Compile Include="forms\msg.Designer.cs">
       <DependentUpon>msg.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,22 +57,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ISResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="select.cs">
+    <Compile Include="forms\select.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="select.Designer.cs">
+    <Compile Include="forms\select.Designer.cs">
       <DependentUpon>select.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="msg.resx">
+    <EmbeddedResource Include="forms\msg.resx">
       <DependentUpon>msg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ISResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ISResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="select.resx">
+    <EmbeddedResource Include="forms\select.resx">
       <DependentUpon>select.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
