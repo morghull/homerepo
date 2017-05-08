@@ -63,6 +63,7 @@
     <Compile Include="forms\select.Designer.cs">
       <DependentUpon>select.cs</DependentUpon>
     </Compile>
+    <Compile Include="StringEncryptor.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="forms\msg.resx">
