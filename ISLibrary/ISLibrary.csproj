@@ -65,6 +65,7 @@
       <DependentUpon>select.cs</DependentUpon>
     </Compile>
     <Compile Include="StringEncryptor.cs" />
+    <Compile Include="XmlSerializableDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="forms\msg.resx">
