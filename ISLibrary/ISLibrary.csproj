@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
@@ -45,6 +46,15 @@
     <Compile Include="Encryptor.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="GlobalSettings.cs" />
+    <Compile Include="usercontrols\SettingsWorkingAreaControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="usercontrols\SettingsTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\SettingsTabControl.Designer.cs">
+      <DependentUpon>SettingsTabControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImageListWrapper.cs" />
     <Compile Include="forms\msg.cs">
       <SubType>Form</SubType>
@@ -77,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\select.resx">
       <DependentUpon>select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\SettingsTabControl.resx">
+      <DependentUpon>SettingsTabControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +136,7 @@
     <Content Include="Resources\24px_png_single_arrow_right.png" />
     <Content Include="Resources\prog.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
