@@ -13,21 +13,25 @@ namespace ISLibrary
         {
             ConnectionSettingsCollection = new Dictionary<ConnectionSettings, ConnectionSetting>();
             UserCredentialsCollection = new Dictionary<UserCredentials, UserCredential>();
-            ConnectionSettingsCollection.Add(ConnectionSettings.pgsqlAnt, new ConnectionSetting()
+        }
+        public static GlobalSettings CreateWithDefaults()
+        {
+            GlobalSettings gs = new GlobalSettings();
+            gs.ConnectionSettingsCollection.Add(ConnectionSettings.pgsqlAnt, new ConnectionSetting()
             {
                 Name = ((XmlEnumAttribute)typeof(ConnectionSettings).GetMember(ConnectionSettings.pgsqlAnt.ToString())[0]
                         .GetCustomAttributes(typeof(XmlEnumAttribute), false)[0]).Name,
                 ProviderName = "System.Data.Odbc",
                 ConnectionString = "Driver={PostgreSQL UNICODE};Server=ant;Port=5432;Database=test;Integrated Security=false;"
             });
-            ConnectionSettingsCollection.Add(ConnectionSettings.mssqlMpa, new ConnectionSetting()
+            gs.ConnectionSettingsCollection.Add(ConnectionSettings.mssqlMpa, new ConnectionSetting()
             {
                 Name = ((XmlEnumAttribute)typeof(ConnectionSettings).GetMember(ConnectionSettings.mssqlMpa.ToString())[0]
                         .GetCustomAttributes(typeof(XmlEnumAttribute), false)[0]).Name,
                 ProviderName = "System.Data.SqlClient",
                 ConnectionString = "server=mpa;Initial Catalog=clipperData;Persist Security Info=false;Integrated Security=false;"
             });
-            UserCredentialsCollection.Add(UserCredentials.pgsqlAntIskrasystems, new UserCredential()
+            gs.UserCredentialsCollection.Add(UserCredentials.pgsqlAntIskrasystems, new UserCredential()
             {
                 Name = ((XmlEnumAttribute)typeof(UserCredentials).GetMember(UserCredentials.pgsqlAntIskrasystems.ToString())[0]
                            .GetCustomAttributes(typeof(XmlEnumAttribute), false)[0]).Name,
@@ -35,16 +39,15 @@ namespace ISLibrary
                 UserName = "iskrasystems",
                 Password = "whrahz5q"
             });
+            return gs;
         }
         public static GlobalSettings ReadFromXml(string fullXmlFileName)
         {
             GlobalSettings gs = new GlobalSettings();
             var xmlReaderSettings = new XmlReaderSettings() { IgnoreComments = true };
-            using (var xmlStreamReader = new System.IO.StreamReader(@"d:\test.xml"))
+            using (var xmlStreamReader = new System.IO.StreamReader(fullXmlFileName))
             using (var xmlReader = XmlReader.Create(xmlStreamReader, xmlReaderSettings))
             {
-                //xmlReader.Read();
-                //xmlReader.ReadStartElement("settings");
                 xmlReader.ReadToFollowing("connection-settings");
                 XmlSerializer csSerializer = new XmlSerializer(typeof(ConnectionSetting[]), new XmlRootAttribute() { ElementName = "connection-settings" });
                 gs.ConnectionSettingsCollection = ((ConnectionSetting[])csSerializer.Deserialize(xmlReader)).ToDictionary(
@@ -64,7 +67,7 @@ namespace ISLibrary
                         Name = i.Name,
                         ConnectionSetting = i.ConnectionSetting,
                         UserName = i.UserName,
-                        Password = i.Password
+                        Password = StringEncryptor.DecryptWithByteArray(i.Password)
                     });
             };
 
@@ -78,10 +81,10 @@ namespace ISLibrary
             //var a = gs.ConnectionSettingsCollection[ConnectionSettings.mssqlMpa];
             return gs;
         }
-        public void WriteToXml(string fullXmlFileName)
+        public bool WriteToXml(string fullXmlFileName)
         {
             var xmlWriterSettings = new XmlWriterSettings() { Indent = true, OmitXmlDeclaration = true, NewLineOnAttributes = true };
-            using (var xmlStreamWriter = new System.IO.StreamWriter(@"d:\test.xml"))
+            using (var xmlStreamWriter = new System.IO.StreamWriter(fullXmlFileName))
             using (var xmlWriter = XmlWriter.Create(xmlStreamWriter, xmlWriterSettings))
             {
                 XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
@@ -102,11 +105,12 @@ namespace ISLibrary
                 #endregion
                 #region user-credentials section: UserCredentials dictionary serialization
                 XmlSerializer ucSerializer = new XmlSerializer(typeof(UserCredential[]), new XmlRootAttribute() { ElementName = "user-credentials" });
-                ucSerializer.Serialize(xmlWriter, UserCredentialsCollection.Values.Select(v => { v.Password = v.Password + "!"; return v; }).ToArray(), ns);
+                ucSerializer.Serialize(xmlWriter, UserCredentialsCollection.Values.Select(v => { v.Password = StringEncryptor.EncryptWithByteArray(v.Password); return v; }).ToArray(), ns);
                 #endregion
 
                 xmlWriter.WriteEndElement();
             };
+            return true;
         }
         public Dictionary<ConnectionSettings, ConnectionSetting> ConnectionSettingsCollection { get; set; }
         public Dictionary<UserCredentials, UserCredential> UserCredentialsCollection { get; set; }
