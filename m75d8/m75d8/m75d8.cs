@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace m75d8
@@ -15,8 +11,12 @@ namespace m75d8
         public m75d8()
         {
             InitializeComponent();
-            ISLibrary.GlobalSettings gs = ISLibrary.GlobalSettings.ReadFromXml("");
-            gs.WriteToXml("");
+            _toolStripButton_Test.Click += (s,e) => {
+                //ISLibrary.GlobalSettings gs = ISLibrary.GlobalSettings.CreateWithDefaults();
+                //gs.WriteToXml(@"d:\global.xml");
+                //testForm tf = new testForm();
+                //tf.ShowDialog();
+            };
             var directoryToSearchIn = Properties.Settings.Default["DirectoryToSearchIn"].ToString();//to start seaching in this directory
             Dictionary<string, string> filePathes = new Dictionary<string, string>();
 

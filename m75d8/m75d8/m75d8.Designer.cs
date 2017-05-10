@@ -34,6 +34,7 @@
             this._toolStripButton_XlsView = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_TxtView = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton_Exit = new System.Windows.Forms.ToolStripButton();
+            this._toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblGod = new System.Windows.Forms.Label();
             this._dateTimePicker_Year = new System.Windows.Forms.DateTimePicker();
@@ -52,7 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this._textBox_mm75040Path = new System.Windows.Forms.TextBox();
             this._btnGetPathTo_mm75040 = new System.Windows.Forms.Button();
-            this._toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
+            this._toolStripButton_Test = new System.Windows.Forms.ToolStripButton();
             this._toolStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this._grpBox_Kiz.SuspendLayout();
@@ -73,7 +74,8 @@
             this._toolStripButton_XlsView,
             this._toolStripButton_TxtView,
             this._toolStripButton_Exit,
-            this._toolStripButton_Settings});
+            this._toolStripButton_Settings,
+            this._toolStripButton_Test});
             this._toolStrip.Location = new System.Drawing.Point(0, 0);
             this._toolStrip.Name = "_toolStrip";
             this._toolStrip.Size = new System.Drawing.Size(571, 31);
@@ -118,6 +120,16 @@
             this._toolStripButton_Exit.Name = "_toolStripButton_Exit";
             this._toolStripButton_Exit.Size = new System.Drawing.Size(28, 28);
             this._toolStripButton_Exit.Text = "Выйти из программы";
+            // 
+            // _toolStripButton_Settings
+            // 
+            this._toolStripButton_Settings.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this._toolStripButton_Settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_Settings.Image = global::m75d8.Properties.Resources._24px_png_settings;
+            this._toolStripButton_Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_Settings.Name = "_toolStripButton_Settings";
+            this._toolStripButton_Settings.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_Settings.Text = "Открыть настройки программы";
             // 
             // lblTitle
             // 
@@ -326,15 +338,14 @@
             this._btnGetPathTo_mm75040.Text = "...";
             this._btnGetPathTo_mm75040.UseVisualStyleBackColor = true;
             // 
-            // _toolStripButton_Settings
+            // _toolStripButton_Test
             // 
-            this._toolStripButton_Settings.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this._toolStripButton_Settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolStripButton_Settings.Image = global::m75d8.Properties.Resources._24px_png_settings;
-            this._toolStripButton_Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolStripButton_Settings.Name = "_toolStripButton_Settings";
-            this._toolStripButton_Settings.Size = new System.Drawing.Size(28, 28);
-            this._toolStripButton_Settings.Text = "Открыть настройки программы";
+            this._toolStripButton_Test.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolStripButton_Test.Image = ((System.Drawing.Image)(resources.GetObject("_toolStripButton_Test.Image")));
+            this._toolStripButton_Test.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolStripButton_Test.Name = "_toolStripButton_Test";
+            this._toolStripButton_Test.Size = new System.Drawing.Size(28, 28);
+            this._toolStripButton_Test.Text = "toolStripButton1";
             // 
             // m75d8
             // 
@@ -399,6 +410,7 @@
         private System.Windows.Forms.TextBox _textBox_mm75040Path;
         private System.Windows.Forms.Button _btnGetPathTo_mm75040;
         private System.Windows.Forms.ToolStripButton _toolStripButton_Settings;
+        private System.Windows.Forms.ToolStripButton _toolStripButton_Test;
     }
 }
 
