@@ -5,7 +5,7 @@ using System.Windows.Forms.Design;
 namespace ISLibrary
 {
     [Designer(typeof(WorkingAreaDesigner))]
-    class SettingsWorkingAreaControl : Panel
+    public class SettingsWorkingAreaControl : Panel
     {
         public SettingsWorkingAreaControl()
         {
