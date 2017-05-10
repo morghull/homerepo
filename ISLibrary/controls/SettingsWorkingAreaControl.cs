@@ -4,9 +4,9 @@ using System.Windows.Forms.Design;
 
 namespace ISLibrary
 {
+    [Designer(typeof(WorkingAreaDesigner))]
     class SettingsWorkingAreaControl : Panel
     {
-        [Designer(typeof(WorkingAreaDesigner))]
         public SettingsWorkingAreaControl()
         {
             base.Dock = DockStyle.Fill;
