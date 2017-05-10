@@ -46,13 +46,13 @@
     <Compile Include="Encryptor.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="GlobalSettings.cs" />
-    <Compile Include="usercontrols\SettingsWorkingAreaControl.cs">
+    <Compile Include="controls\SettingsWorkingAreaControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="usercontrols\SettingsTabControl.cs">
+    <Compile Include="controls\SettingsTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="usercontrols\SettingsTabControl.Designer.cs">
+    <Compile Include="controls\SettingsTabControl.Designer.cs">
       <DependentUpon>SettingsTabControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageListWrapper.cs" />
@@ -88,7 +88,7 @@
     <EmbeddedResource Include="forms\select.resx">
       <DependentUpon>select.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\SettingsTabControl.resx">
+    <EmbeddedResource Include="controls\SettingsTabControl.resx">
       <DependentUpon>SettingsTabControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

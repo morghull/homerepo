@@ -1,10 +1,12 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
 namespace ISLibrary
 {
     class SettingsWorkingAreaControl : Panel
     {
+        [Designer(typeof(WorkingAreaDesigner))]
         public SettingsWorkingAreaControl()
         {
             base.Dock = DockStyle.Fill;
