@@ -136,7 +136,7 @@
             // 
             // _panel_LocalWorkingArea
             // 
-            this._panel_LocalWorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this._panel_LocalWorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this._panel_LocalWorkingArea.Location = new System.Drawing.Point(0, 30);
             this._panel_LocalWorkingArea.Margin = new System.Windows.Forms.Padding(0);
             this._panel_LocalWorkingArea.Name = "_panel_LocalWorkingArea";

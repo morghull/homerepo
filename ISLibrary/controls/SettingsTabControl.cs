@@ -15,10 +15,16 @@ namespace ISLibrary
             {
                 using (OpenFileDialog fd = new OpenFileDialog())
                 {
-                    var dirName = (_textBox_PathToSettingsXml.Text != String.Empty) ? System.IO.Path.GetDirectoryName(_textBox_PathToSettingsXml.Text) : "";
+                    var dirName = "";
+                    if (_textBox_PathToSettingsXml.Text != String.Empty && System.IO.Directory.Exists(_textBox_PathToSettingsXml.Text))
+                        dirName = _textBox_PathToSettingsXml.Text;
+                    else if (_textBox_PathToSettingsXml.Text != String.Empty && System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(_textBox_PathToSettingsXml.Text)))
+                        dirName = System.IO.Path.GetDirectoryName(_textBox_PathToSettingsXml.Text);
+                    else dirName = "";
+                    //dirName = (_textBox_PathToSettingsXml.Text != String.Empty) ? System.IO.Path.GetDirectoryName(_textBox_PathToSettingsXml.Text) : "";
                     fd.Filter = "XML-файлы|*.xml";
                     fd.Title = "Открыть файл настроек";
-                    fd.InitialDirectory = (dirName != String.Empty && System.IO.Directory.Exists(dirName)) ? dirName : Application.StartupPath;
+                    fd.InitialDirectory = (dirName != String.Empty) ? dirName : Application.StartupPath;
                     if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK) _textBox_PathToSettingsXml.Text = fd.FileName;
                 }
             };
